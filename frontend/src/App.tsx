@@ -1,11 +1,16 @@
-import React from "react";
-import ProseMirrorEditor from "./editor/ProseMirrorEditor";
+import Header from "./editor/Header/Header";
+import ProseMirrorEditor from "./editor/EditorContainer/ProseMirrorEditor";
+import "./assets/css/App.css";
+import "./assets/css/ProseMirror.css";
+import "./assets/css/Header.css";
 
 function App() {
   return (
-    <div className="p-4 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Mon Word (Prototype)</h1>
-      <ProseMirrorEditor />
+    <div className="app-wrapper">
+      <Header />
+      <div className="editor-container">
+        <ProseMirrorEditor />
+      </div>
     </div>
   );
 }
